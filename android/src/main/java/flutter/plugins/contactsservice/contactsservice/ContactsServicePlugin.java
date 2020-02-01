@@ -222,7 +222,7 @@ public class ContactsServicePlugin implements MethodCallHandler {
         StructuredPostal.CONTENT_ITEM_TYPE, CommonDataKinds.Event.CONTENT_ITEM_TYPE, ContactsContract.RawContacts.ACCOUNT_TYPE
     };
     if(query != null){
-      selectionArgs = new String[]{query + "%"};
+      selectionArgs = new String[]{"%" + query + "%"};
       selection = ContactsContract.Contacts.DISPLAY_NAME_PRIMARY + " LIKE ?";
     }
 
